@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  app-python:
+    image: python
+    container_name: python
+    volumes:
+      - .:/app
+      - pipenv:/usr/local/lib/python3.12/site-packages
+    working_dir: /app
+    command: tail -f /dev/null
+
+volumes:
+  pipenv:
